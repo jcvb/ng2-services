@@ -1,0 +1,14 @@
+<h1>{{ title }} Hello {{name}}</h1>
+
+<h3>3 Formas de cargar imagenes</h3>
+<img [src]="linkURL">
+<img src="{{linkURL}}">
+<img bind-src="linkURL">
+<p>Con value: <input [value]="linkURL" size="100" on-mouseout="mouseOuted()" (keyup)="userKeyUp($event)"></p>
+<p>Con ngModel: <input [(ngModel)]="linkURL" size="100" (ngModelChange)="modelChanged()"></p>
+<p>
+	<button class="my-btn" [class.extraclass]="evaluation">Call to action</button>
+	<button class="my-btn" [style.border]="evaluation ? '5px solid yellow': 'none'">Call to action</button>
+	<button [ngClass]="setClasses()">Call to action</button>
+	<button [ngStyle]="setStyles()">Call to action</button>
+</p>
